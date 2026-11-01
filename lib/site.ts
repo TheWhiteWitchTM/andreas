@@ -29,6 +29,9 @@ export const portrait = {
   height: 1248,
 }
 
+/** Stable anchors for the four services, same order as the copy. */
+export const serviceAnchors = ["java", "cpp", "csharp", "vb"] as const
+
 export function withBase(path: string): string {
   const normalized = path.startsWith("/") ? path : `/${path}`
   return `${basePath}${normalized}`

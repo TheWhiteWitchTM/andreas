@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { dictionary } from "@/lib/i18n"
 import type { Locale } from "@/lib/routes"
 import { localize } from "@/lib/routes"
-import { legalName, person, portrait, withBase } from "@/lib/site"
+import { legalName, person, serviceAnchors } from "@/lib/site"
 
 const githubPrivacy = "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
 
@@ -15,21 +15,11 @@ export function HomeView({ lang }: { lang: Locale }) {
 
   return (
     <div className="space-y-10">
-      <section className="frame overflow-hidden">
-        <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,14rem)_minmax(0,1fr)]">
-          <div className="bg-black">
-            <img
-              src={withBase(portrait.src)}
-              alt={dictionary[lang].portraitAlt}
-              width={portrait.width}
-              height={portrait.height}
-              className="aspect-[3/4] h-auto w-full object-cover object-top sm:aspect-auto sm:h-full sm:max-h-[28rem]"
-            />
-          </div>
-          <div className="flex flex-col justify-center gap-4 p-5 sm:p-7">
+      <section className="frame p-5 sm:p-7">
+        <div className="flex flex-col gap-4">
             <p className="kicker">{copy.kicker}</p>
-            <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">{copy.title}</h1>
-            <p className="max-w-md text-base text-muted">{copy.lead}</p>
+            <h1 className="text-4xl font-semibold tracking-tight text-white">{copy.title}</h1>
+            <p className="text-base text-muted">{copy.lead}</p>
             <ul className="flex flex-wrap gap-2">
               {copy.services.map((item) => (
                 <li key={item.title}>
@@ -46,10 +36,9 @@ export function HomeView({ lang }: { lang: Locale }) {
               </Button>
             </div>
           </div>
-        </div>
       </section>
 
-      <section>
+      <section data-rail="services">
         <p className="kicker">{copy.hireKicker}</p>
         <h2 className="mt-1 text-2xl font-semibold tracking-tight text-white">{copy.hireTitle}</h2>
         <ul className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -68,7 +57,7 @@ export function HomeView({ lang }: { lang: Locale }) {
         </ul>
       </section>
 
-      <section>
+      <section data-rail="reach">
         <p className="kicker">{copy.reachKicker}</p>
         <h2 className="mt-1 text-2xl font-semibold tracking-tight text-white">{copy.reachTitle}</h2>
         <ul className="mt-4 grid gap-3 sm:grid-cols-3">
@@ -87,7 +76,7 @@ export function HomeView({ lang }: { lang: Locale }) {
         </ul>
       </section>
 
-      <section className="frame p-5 sm:p-6">
+      <section className="frame p-5 sm:p-6" data-rail="mira">
         <p className="kicker">{copy.miraKicker}</p>
         <h2 className="mt-1 text-2xl font-semibold tracking-tight text-white">{copy.miraTitle}</h2>
         <p className="mt-2 max-w-md text-sm text-muted">{copy.miraText}</p>
@@ -115,8 +104,8 @@ export function ServicesView({ lang }: { lang: Locale }) {
         <p className="mt-3 max-w-prose text-muted">{copy.lead}</p>
       </header>
       <ul className="grid gap-3">
-        {copy.items.map((item) => (
-          <li key={item.title}>
+        {copy.items.map((item, index) => (
+          <li key={item.title} id={serviceAnchors[index]}>
             <Card>
               <CardHeader>
                 <CardTitle>{item.title}</CardTitle>
@@ -146,22 +135,11 @@ export function AboutView({ lang }: { lang: Locale }) {
   return (
     <article className="space-y-6">
       <p className="kicker">{copy.kicker}</p>
-      <div className="grid items-start gap-6 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)]">
-        <img
-          src={withBase(portrait.src)}
-          alt={dictionary[lang].portraitAlt}
-          width={portrait.width}
-          height={portrait.height}
-          className="aspect-[3/4] w-full max-w-[14rem] rounded-lg object-cover object-top"
-        />
-        <div>
-          <h1 className="text-4xl font-semibold tracking-tight text-white">{copy.title}</h1>
-          <div className="mt-4 space-y-3 text-paper">
-            {copy.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </div>
+      <h1 className="text-4xl font-semibold tracking-tight text-white">{copy.title}</h1>
+      <div className="space-y-3 text-paper">
+        {copy.paragraphs.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
       </div>
     </article>
   )
