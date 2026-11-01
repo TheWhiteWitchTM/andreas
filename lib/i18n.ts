@@ -25,6 +25,80 @@ const de = {
   sidePlace: "Mainz · Rheinland-Pfalz",
   portraitAlt: "Andreas, kurzes braunes Haar, Brille, schwarzes Jackett, vor schwarzem Hintergrund.",
   ogAlt: "Andreas. Java, C++, C# und Visual Basic. Mainz, Rheinland-Pfalz, Hessen.",
+  rail: {
+    home: {
+      kicker: "Andreas · Mainz",
+      title: "Freiberufliche Software.",
+      text: "Java, C++, C# und Visual Basic. Der Sitz ist Mainz.",
+      alt: "Ein dunkler Schreibtisch mit Laptop, Tastatur, Kaffee und einem geschlossenen Notizbuch.",
+    },
+    services: {
+      kicker: "Leistungen",
+      title: "Was er übernimmt",
+      text: "Java, C++, C# und Visual Basic.",
+      alt: "Eine schwarze Ledermappe, ein Füller und ein geschlossener Laptop auf einem dunklen Schreibtisch.",
+    },
+    java: {
+      kicker: "Java",
+      title: "Java",
+      text: "Anwendungen, Schnittstellen und die Pflege laufender Systeme.",
+      alt: "Eine Kaffeetasse, leere Karteikarten und der Rand eines Laptops auf einem dunklen Schreibtisch.",
+    },
+    cpp: {
+      kicker: "C++",
+      title: "C++",
+      text: "Native Programme und Werkzeuge, die auf der Maschine bleiben.",
+      alt: "Eine Platine, ein kleiner Schraubendreher und eine schwarze Tastatur auf einem dunklen Schreibtisch.",
+    },
+    csharp: {
+      kicker: "C#",
+      title: "C#",
+      text: "Anwendungen und Dienste auf .NET.",
+      alt: "Ein Laptop mit einem violetten Fenster und ein Stapel dunkler Karten auf einem Schreibtisch.",
+    },
+    vb: {
+      kicker: "Visual Basic",
+      title: "Visual Basic",
+      text: "Bestehende Programme warten, erweitern und anbinden.",
+      alt: "Eine ältere helle Tastatur neben einem modernen Laptop und einem geschlossenen Handbuch.",
+    },
+    reach: {
+      kicker: "Erreichbar",
+      title: "Wo die Arbeit stattfindet",
+      text: "Remote, vor Ort in Rheinland-Pfalz und Hessen, und auf Reise.",
+      alt: "Ein Nachtsitz im Zug mit Ledertasche und geschlossenem Laptop am Fenster.",
+    },
+    mira: {
+      kicker: "Nebenan",
+      title: "Mira's World",
+      text: "AI, C++ und TypeScript.",
+      alt: "Ein dunkler Flur und eine offene Tür, aus der violettes Licht fällt.",
+    },
+    about: {
+      kicker: "Über",
+      title: "Andreas",
+      text: "Mainz. Deutsch und Englisch. Remote und vor Ort.",
+      alt: "Eine alte Computertastatur und ein geschlossenes Handbuch auf einem schwarzen Schreibtisch.",
+    },
+    contact: {
+      kicker: "Kontakt",
+      title: "Mainz",
+      text: "Remote in Deutschland und überall. Vor Ort in Rheinland-Pfalz und Hessen.",
+      alt: "Ein verschlossener Umschlag und ein schwarzes Telefon auf einem dunklen Schreibtisch.",
+    },
+    imprint: {
+      kicker: "Impressum",
+      title: "Impressum",
+      text: "Angaben nach § 5 DDG.",
+      alt: "Eine geschlossene schwarze Dokumentenmappe und ein Briefbeschwerer auf einem dunklen Schreibtisch.",
+    },
+    privacy: {
+      kicker: "Datenschutz",
+      title: "Datenschutz",
+      text: "Statische Seite. Keine Cookies, kein Tracking.",
+      alt: "Ein geschlossenes schwarzes Notizbuch und ein kleiner Messingschlüssel auf einem dunklen Schreibtisch.",
+    },
+  },
   meta: {
     home: {
       title: "Andreas — Freiberufliche Software aus Mainz",
@@ -188,6 +262,80 @@ const en: typeof de = {
   sidePlace: "Mainz · Rheinland-Pfalz",
   portraitAlt: "Andreas, short brown hair, glasses, black jacket, against a black background.",
   ogAlt: "Andreas. Java, C++, C#, and Visual Basic. Mainz, Rhineland-Palatinate, Hessen.",
+  rail: {
+    home: {
+      kicker: "Andreas · Mainz",
+      title: "Freelance software.",
+      text: "Java, C++, C#, and Visual Basic. Based in Mainz.",
+      alt: "A dark desk with a laptop, a keyboard, coffee, and a closed notebook.",
+    },
+    services: {
+      kicker: "Services",
+      title: "What he takes",
+      text: "Java, C++, C#, and Visual Basic.",
+      alt: "A black leather folder, a fountain pen, and a closed laptop on a dark desk.",
+    },
+    java: {
+      kicker: "Java",
+      title: "Java",
+      text: "Applications, interfaces, and the upkeep of systems already running.",
+      alt: "A coffee cup, blank index cards, and the edge of a laptop on a dark desk.",
+    },
+    cpp: {
+      kicker: "C++",
+      title: "C++",
+      text: "Native programs and tools that stay on the machine.",
+      alt: "A circuit board, a small screwdriver, and a black keyboard on a dark desk.",
+    },
+    csharp: {
+      kicker: "C#",
+      title: "C#",
+      text: "Applications and services on .NET.",
+      alt: "A laptop with a violet window and a stack of dark cards on a desk.",
+    },
+    vb: {
+      kicker: "Visual Basic",
+      title: "Visual Basic",
+      text: "Existing programs, kept running, extended, and connected.",
+      alt: "An older light keyboard beside a modern laptop and a closed handbook.",
+    },
+    reach: {
+      kicker: "Reach",
+      title: "Where the work happens",
+      text: "Remote, on site in Rhineland-Palatinate and Hessen, and travel.",
+      alt: "A night seat on a train, with a leather bag and a closed laptop by the window.",
+    },
+    mira: {
+      kicker: "Next door",
+      title: "Mira's World",
+      text: "AI, C++, and TypeScript.",
+      alt: "A dark hallway and an open door with violet light spilling out.",
+    },
+    about: {
+      kicker: "About",
+      title: "Andreas",
+      text: "Mainz. German and English. Remote and on site.",
+      alt: "A vintage computer keyboard and a closed handbook on a black desk.",
+    },
+    contact: {
+      kicker: "Contact",
+      title: "Mainz",
+      text: "Remote across Germany and anywhere. On site in Rhineland-Palatinate and Hessen.",
+      alt: "A sealed envelope and a black telephone on a dark desk.",
+    },
+    imprint: {
+      kicker: "Legal notice",
+      title: "Legal notice",
+      text: "Information under section 5 of the German Digital Services Act.",
+      alt: "A closed black document folder and a paperweight on a dark desk.",
+    },
+    privacy: {
+      kicker: "Privacy",
+      title: "Privacy",
+      text: "A static site. No cookies, no analytics.",
+      alt: "A closed black notebook and a small brass key on a dark desk.",
+    },
+  },
   meta: {
     home: {
       title: "Andreas — freelance software from Mainz",

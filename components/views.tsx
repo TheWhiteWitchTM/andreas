@@ -15,7 +15,7 @@ export function HomeView({ lang }: { lang: Locale }) {
 
   return (
     <div className="space-y-10">
-      <section className="frame p-5 sm:p-7">
+      <section className="frame p-5 sm:p-7" data-rail="home">
         <div className="flex flex-col gap-4">
             <p className="kicker">{copy.kicker}</p>
             <h1 className="text-4xl font-semibold tracking-tight text-white">{copy.title}</h1>
@@ -98,14 +98,14 @@ export function ServicesView({ lang }: { lang: Locale }) {
 
   return (
     <article className="space-y-8">
-      <header>
+      <header data-rail="services">
         <p className="kicker">{copy.kicker}</p>
         <h1 className="mt-1 text-4xl font-semibold tracking-tight text-white">{copy.title}</h1>
         <p className="mt-3 max-w-prose text-muted">{copy.lead}</p>
       </header>
       <ul className="grid gap-3">
         {copy.items.map((item, index) => (
-          <li key={item.title} id={serviceAnchors[index]}>
+          <li key={item.title} id={serviceAnchors[index]} data-rail={serviceAnchors[index]} className="scroll-mt-28">
             <Card>
               <CardHeader>
                 <CardTitle>{item.title}</CardTitle>
@@ -117,14 +117,16 @@ export function ServicesView({ lang }: { lang: Locale }) {
           </li>
         ))}
       </ul>
-      <Card>
-        <CardHeader>
-          <CardTitle>{copy.noteTitle}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p>{copy.note}</p>
-        </CardContent>
-      </Card>
+      <section data-rail="reach">
+        <Card>
+          <CardHeader>
+            <CardTitle>{copy.noteTitle}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p>{copy.note}</p>
+          </CardContent>
+        </Card>
+      </section>
     </article>
   )
 }
@@ -133,7 +135,7 @@ export function AboutView({ lang }: { lang: Locale }) {
   const copy = dictionary[lang].about
 
   return (
-    <article className="space-y-6">
+    <article className="space-y-6" data-rail="about">
       <p className="kicker">{copy.kicker}</p>
       <h1 className="text-4xl font-semibold tracking-tight text-white">{copy.title}</h1>
       <div className="space-y-3 text-paper">
@@ -149,7 +151,7 @@ export function ContactView({ lang }: { lang: Locale }) {
   const copy = dictionary[lang].contact
 
   return (
-    <article className="space-y-8">
+    <article className="space-y-8" data-rail="contact">
       <header>
         <p className="kicker">{copy.kicker}</p>
         <h1 className="mt-1 text-4xl font-semibold tracking-tight text-white">{copy.title}</h1>
@@ -193,7 +195,7 @@ export function ImprintView({ lang }: { lang: Locale }) {
   ].filter((item): item is string => Boolean(item))
 
   return (
-    <article className="space-y-6">
+    <article className="space-y-6" data-rail="imprint">
       <header>
         <p className="kicker">{copy.kicker}</p>
         <h1 className="mt-1 text-4xl font-semibold tracking-tight text-white">{copy.title}</h1>
@@ -270,7 +272,7 @@ export function PrivacyView({ lang }: { lang: Locale }) {
   const copy = dictionary[lang].privacy
 
   return (
-    <article className="space-y-4">
+    <article className="space-y-4" data-rail="privacy">
       <p className="kicker">{copy.kicker}</p>
       <h1 className="text-4xl font-semibold tracking-tight text-white">{copy.title}</h1>
       {copy.paragraphs.map((paragraph) => (

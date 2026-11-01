@@ -27,7 +27,7 @@ The dev server is at `http://localhost:3000`.
 npm run build
 ```
 
-`npm run build` writes `out/` with the `/andreas` base path, writes `.nojekyll`, and copies into `TheWhiteWitchTM.github.io/andreas/` when that repo sits next to this one. The copy merges Jekyll `include` names so Mira's export stays intact.
+`npm run build` writes `out/` with the `/andreas` base path and writes `.nojekyll`. The export stays in `out/`.
 
 ## Preview
 
