@@ -55,7 +55,7 @@ a {
   @apply text-xs font-medium uppercase tracking-[0.16em] text-accent;
 }
 
-/* Three columns, same frame as The White Witch: Mira, the reading text, Andreas.
+/* Three columns, same frame as The White Witch: Andreas, the reading text, Mira.
    Sticky stays on the inner box. Sticky on the flex item crushed the article. */
 .page-frame {
   flex: 1 0 auto;

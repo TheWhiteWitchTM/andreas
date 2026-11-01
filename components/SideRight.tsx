@@ -1,18 +1,17 @@
-"use client"
-
-import { usePathname } from "next/navigation"
-import { dictionary } from "@/lib/i18n"
-import { splitPath } from "@/lib/routes"
-import { portrait, withBase } from "@/lib/site"
+import { person, withBase } from "@/lib/site"
 
 export function SideRight() {
-  const { lang } = splitPath(usePathname())
-  const copy = dictionary[lang]
-
   return (
-    <aside className="side-rail" aria-label="Andreas">
+    <aside className="side-rail" aria-label="Mira">
       <div className="side-stick">
-        <img src={withBase(portrait.src)} alt={copy.portraitAlt} width={portrait.width} height={portrait.height} />
+        <a href={person.mira} target="_blank" rel="noopener noreferrer">
+          <img
+            src={withBase("/mira.jpg")}
+            alt="Mira, smiling, red hair in a ponytail, black jacket, pointing."
+            width={1008}
+            height={1792}
+          />
+        </a>
       </div>
     </aside>
   )
