@@ -18,6 +18,9 @@ export function SideLeft() {
           width={portrait.width}
           height={portrait.height}
         />
+        <p className="mt-3 text-sm font-medium text-accent">Andreas</p>
+        <p className="rail-text">{copy.sideRole}</p>
+        <p className="rail-text">{copy.sidePlace}</p>
       </div>
     </aside>
   )
