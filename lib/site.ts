@@ -15,7 +15,7 @@ export const person = {
   city: "Mainz",
   region: "Rheinland-Pfalz",
   countryCode: "DE",
-  mira: "https://thewhitewitchtm.github.io/mira/",
+  mira: "https://miratechtm.sociallydead.me/",
   miraName: "Mira's World",
 }
 

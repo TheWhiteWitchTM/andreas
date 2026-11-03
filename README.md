@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://thewhitewitchtm.github.io/andreas/"><strong>Open the site</strong></a><br>
   Freelance software from Mainz. Java, C++, C#, and Visual Basic. German and English.<br>
-  <a href="https://thewhitewitchtm.github.io/mira/">Mira's World</a>
+  <a href="https://miratechtm.sociallydead.me/">Mira's World</a>
 </p>
 
 Static Next.js, TypeScript, Tailwind 4, shadcn. GitHub Pages serves the export at `/andreas/`.
